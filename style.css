@@ -1,0 +1,113 @@
+body{
+    background-color: #eeeeee;
+}
+
+main{
+    width:50%;
+    max-width:800px;
+    margin:100px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+img{
+    vertical-align: bottom;
+    object-fit: cover;
+    height:100%;
+    max-height:350px;
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+#main{
+    width:100%;
+    height:100%;
+    margin-bottom: 8px;
+    opacity:1;
+    animation:fadeIn .8s;
+    box-shadow: 0 4px 10px rgba(0,0,0,.2);
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+nav{
+    margin: 15px 0;
+}
+
+nav ul{
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    font-size: 12px;
+    font-weight: 300;
+    color:#777;
+    text-align: center;
+    padding: 4px;
+    cursor: pointer;
+    letter-spacing: .3em;
+}
+
+nav li{
+    border-radius: 20px;
+    padding:6px 0;
+    display:block;
+}
+
+
+.neumorphism,.neumorphism.checked:active{
+    background:#eee;
+    transition: box-shadow .4s ease-in-out;
+    box-shadow:inset -4px -4px 4px transparent, inset 8px 8px 8px transparent,-4px -4px 4px rgba(255,255,255,1), 4px 4px 4px rgba(219,219,219,1);
+  }
+
+  .neumorphism:hover, .neumorphism.checked{
+    box-shadow:inset -4px -4px 4px rgba(255,255,255,1), inset 8px 8px 8px rgba(219,219,219,1), -4px -4px 4px transparent, 4px 4px 4px transparent;
+  }
+
+
+#play{
+    width:140px;
+}
+
+#prev, #next{
+    width:60px;
+}
+
+.thumbnails{
+    display:grid;
+    width:50%;
+    margin:0 auto;
+    grid-template-columns: repeat(4, 25%);
+    gap:5px;
+}
+
+.thumbnails li{
+    display: flex;
+    margin:3px 0;
+    justify-content: center;
+    cursor: pointer;
+    opacity:0.6;
+    filter:grayscale(1);
+    transition: opacity .5s, filter .5s;
+}
+
+.thumbnails li:hover, .thumbnails li.current{
+    opacity: 1;
+    filter:none;
+}
+
+.thumbnails img{
+    max-width:100px;
+    width:100%;
+}
